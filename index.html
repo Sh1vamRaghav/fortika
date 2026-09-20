@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fortika - a private photo wall for two</title>
+<style>
+  :root{--wood:#1a1008;--panel:#241509;--cream:#f0e6c8;--paper:#f5f0e8;--amber:#e8a84a;--muted:#b89b6a;--ink:#2a1c10}
+  *{box-sizing:border-box}
+  html{background:var(--wood);color:var(--cream)}
+  body{margin:0;font:18px/1.7 Georgia,'Times New Roman',serif}
+  main{max-width:40rem;margin:0 auto;padding:3rem 1.25rem 4rem}
+  a{color:var(--amber);text-underline-offset:.15em}
+  a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+  h1{font-size:2.1rem;line-height:1.2;margin:0 0 .5rem;font-weight:normal}
+  h2{font-size:1.25rem;margin:2.4rem 0 .4rem;color:var(--amber);font-weight:normal}
+  p,li{max-width:36rem}
+  ul{padding-left:1.2rem}
+  .lede{font-size:1.2rem;color:var(--cream)}
+  .muted{color:var(--muted);font-size:.95rem}
+  .polaroid{position:relative;display:inline-block;background:var(--paper);color:var(--ink);
+    padding:.7rem .7rem 1rem;border-radius:3px;transform:rotate(-2.5deg);margin:0 0 2rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .polaroid .photo{width:9.5rem;height:9.5rem;background:linear-gradient(135deg,#5a3a1c,#c98a3d 55%,#e8c27a)}
+  .polaroid .cap{display:block;text-align:center;font-style:italic;font-size:1.15rem;margin-top:.55rem}
+  .polaroid::before{content:"";position:absolute;top:-.6rem;left:50%;width:3.6rem;height:1.2rem;margin-left:-1.8rem;
+    background:rgba(232,200,90,.75);transform:rotate(3deg)}
+  nav.foot{margin-top:3.5rem;padding-top:1.2rem;border-top:1px solid rgba(200,150,60,.25);font-size:.95rem}
+  nav.foot a{margin-right:1.2rem}
+</style>
+</head>
+<body>
+<main>
+<div class="polaroid" aria-hidden="true"><div class="photo"></div><span class="cap">fortika</span></div>
+<h1>fortika</h1>
+<p class="lede">A small private keepsake app for two people: a wall of pinned polaroid photos and a wall of question-and-answer memories.</p>
+
+<h2>What it does</h2>
+<ul>
+  <li><strong>Photo wall.</strong> Choose a photo, crop it to a square, add a caption and a date, and pin it to the wall. Tap a pinned photo to enlarge it, flip it over to see the date, or spin it.</li>
+  <li><strong>Q&amp;A wall.</strong> Pin a question and add a reply from each person, like a shared notebook of little memories.</li>
+  <li><strong>Works offline.</strong> Photos and notes appear on your phone right away and sync when you are back online.</li>
+</ul>
+
+<h2>How it uses Google Drive</h2>
+<p>fortika has no server of its own. Everything you add is stored in a folder named &ldquo;MemoryWalls&rdquo; in the Google Drive account of the person who set the app up. It asks for the <code>drive.file</code> permission, which lets the app see only the files and folders it created itself. It cannot read anything else in that Drive.</p>
+
+<h2>Who it is for</h2>
+<p>fortika is not a public service. It is installed by the two people it was made for, and there is no sign-up.</p>
+
+<p class="muted">Read the <a href="privacy.html">privacy policy</a> and the <a href="terms.html">terms of service</a>.</p>
+
+<nav class="foot" aria-label="Site">
+  <a href="index.html">Home</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a>
+</nav>
+</main>
+</body>
+</html>
